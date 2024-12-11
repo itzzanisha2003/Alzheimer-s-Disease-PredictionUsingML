@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alzeimer Diesease Prediction App</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    </head>
+
+    <body>
+        <body style="background-color:#42bcf5">
+        <!-- Java Script -->	
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+        <div class="jumbotron">
+            <center>
+                <h1>Alzheimer Disease Prediction</h1>
+            </center>
+        </div>
+
+        <div class="container">
+            <h3> Provide input here </h3>
+
+            <!-- enctype="multipart/form-data"   -->
+            <!-- For passing files -->
+
+            <form method="POST" action="">
+
+                <div class="form-group">
+                    <label for="exampleInput">Visit</label>
+                    <input type="text" name="Visit" required class="form-control" id="exampleInput" placeholder="Visit">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInput">M/R Delay</label>
+                    <input type="text" name="M/R Delay" required class="form-control" id="exampleInput"
+                        placeholder="M/R Delay">
+                </div>
+
+                <div class="form-group">
+                    <label for="sex">Sex</label>
+                    <select class="form-control" id="M/F"  name="M/F" required>
+                      <option disabled selected value> -- Select an Option -- </option>
+                      <option value = "1">Male</option>
+                      <option value = "0">Female</option>
+                    </select>
+               </div>
+            
+
+                <div class="form-group">
+                    <label for="exampleInput">Age</label>
+                    <input type="text" name="Age" required class="form-control" id="exampleInput" placeholder="Age">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInput">eDUC</label>
+                    <input type="text" name="eDUC" required class="form-control" id="exampleInput" placeholder="eDUC">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInput">MMSE</label>
+                    <input type="text" name="MMSE" required class="form-control" id="exampleInput" placeholder="MMSE">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInput">SES</label>
+                    <input type="text" name="SES" required class="form-control" id="exampleInput" placeholder="SES">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInput">CDR</label>
+                    <input type="text" name="CDR" required class="form-control" id="exampleInput" placeholder="CDR">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInput">eTIV</label>
+                    <input type="text" name="eTIV" required class="form-control" id="exampleInput" placeholder="eTIV">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInput">nWBV</label>
+                    <input type="text" name="nWBV" required class="form-control" id="exampleInput" placeholder="nWBV">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInput">ASF</label>
+                    <input type="text" name="ASF" required class="form-control" id="exampleInput" placeholder="ASF">
+                </div>
+            </div>
+
+
+
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+            <!--Prediction result-->
+            <div id = "Result">
+                <center>
+                    <h1 style="color:red">{{result}}</h1>
+                </center>
+            </div>
+            <div class="spacer" style="width: 100%; height: 200px"></div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
